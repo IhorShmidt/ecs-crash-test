@@ -72,8 +72,9 @@ app.use(function(req, res) {
 
 (async () => {
     await delay();
-    app.listen(3000, () => {
-        console.log('listening on port 3000');
+    const port = 80;
+    app.listen(port, () => {
+        console.log(`listening on port ${port}`);
     })
 })()
 
