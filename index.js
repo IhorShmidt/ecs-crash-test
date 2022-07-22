@@ -47,6 +47,8 @@ app.post('/error', (req, res, next) => {
     }
 });
 
+app.get('/hc', (req, res) => res.status(200).json({status: 'ok'}));
+
 app.get('/crash', (req, res, next) => {
     console.log('crushing the server');
     process.exit()
